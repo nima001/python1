@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8b400a81-05b4-4aea-99cf-7ae5982e6f12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helloword.py" beforeDir="false" afterPath="$PROJECT_DIR$/helloword.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,6 +115,7 @@
       <workItem from="1568179745546" duration="8351000" />
       <workItem from="1568628684353" duration="8763000" />
       <workItem from="1568638221772" duration="10290000" />
+      <workItem from="1568648725657" duration="1066000" />
     </task>
     <servers />
   </component>
@@ -136,6 +136,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/untitled$helloword.coverage" NAME="helloword Coverage Results" MODIFIED="1568648739504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/untitled$helloword.coverage" NAME="helloword Coverage Results" MODIFIED="1568648846069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
