@@ -253,15 +253,15 @@
 # print("{:.3f}".format(sum(list)))
 
 # 输入在一行中给出一系列正整数，其间以空格分隔。当读到零或负整数时，表示输入结束，该数字不要处理
-list = [int(i) for i in input().split()]
-sum=0
-for j in list:
-    if j>0:
-       if j%2==1:
-           sum+=j
-    else:
-        break
-print(sum)
+# list = [int(i) for i in input().split()]
+# sum=0
+# for j in list:
+#     if j>0:
+#        if j%2==1:
+#            sum+=j
+#     else:
+#         break
+# print(sum)
 # 给定两个均不超过9的正整数a和n，要求编写程序求a+aa+aaa++⋯+aa⋯a（n个a）之和
 # a,n = input().split()
 # while int(a) > 9:
@@ -270,3 +270,95 @@ print(sum)
 #     n= int(input())
 # list=[int(a*i) for i in range(1,int(n)+1)]
 # print("s = {}".format(sum(list)))
+
+
+# 序列,切片
+# a=[2,3,5,7,11,13]
+# # print(a[:])
+# # print(a[0:2])
+# # print(a[1:])
+# # print(a[:6])
+# # print(a[:-5])
+# # print(a[-6:-5])
+# # print(a[0:5:2])
+# # print(a[-1:0:-1])
+# # print(a[::-1])
+
+# 字符串
+
+print(r"sdfjafjoa\nsdfaf")  # r表示输出原始字符串，此时转义字符失效
+
+# find()返回第一次出现位置的下标
+s = "this is jingbingfeng"
+print(s.find("is"))
+print(s.find("is", 3))
+print(s.find("is", 3, 6))  # 不包含结束位置
+print(s.find("is", 3, 7))  # 不包含结束位置
+
+# title()首字母大写,原字符串不变，产生一个新的字符串，并把首字母大写
+print(s.title())
+
+# strip()去掉左右两边的空格，rstrip()去掉右边的空格，lstrip()去掉左边的空格
+
+# 数字转换为字符串，见书63页,%10d表示填充10个空格
+print("she is %d" % (23))
+print("%s is %10d" % ("jinbingfeng",23))
+# 右对齐10各空格，左边剩余用*填充
+print("{:*>10}".format(101))#10表示宽度，一共有10位
+print("{:b}".format(10))#转2进制
+print("{:o}".format(10))#转8进制
+print("{:x}".format(10))#转16进制
+print("{0:a^16.5f} {1:a^16.5f}".format(10.5555555,1))#15.5表示宽度.精度，宽度表示总长度，精度表示保留几位小数，索引代表format里面的参数，0代表第一个，1代表第2个
+print("{:a^.5f}".format(10.5555555))
+
+# list是类型转换函数
+# 列表的创建
+a=[]#创建空列表
+a=[2,3,4,5,6]
+a=list("hello")#通过list创建
+
+
+matrix=[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20]]
+print(len(matrix))
+print(matrix[0])
+print(matrix[0][0])
+
+# 列表元素的赋值,列表可修改，字符串不可修改
+s=[1,3,5,7,9]
+s[0]=2
+print(s[0])
+
+# 列表删除元素
+del(s[0])
+print(s)
+#切片赋值
+name=list("Perl")
+print(name)
+name[2:3]=list("arel")#替换第二位
+print(name)
+name=list("Perl")
+print(name)
+name[2:2]=list("arel")#插入输入，并放入第2位
+print(name)
+
+
+#列表的函数或方法
+# append()在列表末尾追加
+name.append(12)
+print("append():{}".format(name))
+#extend()拓展列表,加好和extend的区别：加好是连接两个列表，产生一个新列表，原来的列表没变化，extend扩充列表，原列表被扩充
+name.extend([13,15])
+namename=name+[12]
+print("extend；{0}{1}".format(name,namename))
+#copy()赋值列表
+name1=name.copy()
+print("copy():{}".format(name1))
+#insert()插入
+name.insert(12,111)
+print(name)
+#clear()清除列表所有数据,删除某个元素用remove()
+name.clear()
+print("clear:{}".format(name))
+
+
+
