@@ -1,3 +1,6 @@
+# 列表是序列的一种
+
+
 # print('helloword')
 #
 # a = input("请输入数据：")
@@ -285,80 +288,215 @@
 # # print(a[::-1])
 
 # 字符串
-
-print(r"sdfjafjoa\nsdfaf")  # r表示输出原始字符串，此时转义字符失效
-
-# find()返回第一次出现位置的下标
-s = "this is jingbingfeng"
-print(s.find("is"))
-print(s.find("is", 3))
-print(s.find("is", 3, 6))  # 不包含结束位置
-print(s.find("is", 3, 7))  # 不包含结束位置
+#
+# print(r"sdfjafjoa\nsdfaf")  # r表示输出原始字符串，此时转义字符失效
+#
+# # find()返回第一次出现位置的下标
+# s = "this is jingbingfeng"
+# print(s.find("is"))
+# print(s.find("is", 3))
+# print(s.find("is", 3, 6))  # 不包含结束位置
+# print(s.find("is", 3, 7))  # 不包含结束位置
 
 # title()首字母大写,原字符串不变，产生一个新的字符串，并把首字母大写
-print(s.title())
+# print(s.title())
 
 # strip()去掉左右两边的空格，rstrip()去掉右边的空格，lstrip()去掉左边的空格
 
 # 数字转换为字符串，见书63页,%10d表示填充10个空格
-print("she is %d" % (23))
-print("%s is %10d" % ("jinbingfeng",23))
-# 右对齐10各空格，左边剩余用*填充
-print("{:*>10}".format(101))#10表示宽度，一共有10位
-print("{:b}".format(10))#转2进制
-print("{:o}".format(10))#转8进制
-print("{:x}".format(10))#转16进制
-print("{0:a^16.5f} {1:a^16.5f}".format(10.5555555,1))#15.5表示宽度.精度，宽度表示总长度，精度表示保留几位小数，索引代表format里面的参数，0代表第一个，1代表第2个
-print("{:a^.5f}".format(10.5555555))
+# print("she is %d" % (23))
+# print("%s is %10d" % ("jinbingfeng",23))
+# # 右对齐10各空格，左边剩余用*填充
+# print("{:*>10}".format(101))#10表示宽度，一共有10位
+# print("{:b}".format(10))#转2进制
+# print("{:o}".format(10))#转8进制
+# print("{:x}".format(10))#转16进制
+# print("{0:a^16.5f} {1:a^16.5f}".format(10.5555555,1))#15.5表示宽度.精度，宽度表示总长度，精度表示保留几位小数，索引代表format里面的参数，0代表第一个，1代表第2个
+# print("{:a^.5f}".format(10.5555555))
 
 # list是类型转换函数
 # 列表的创建
-a=[]#创建空列表
-a=[2,3,4,5,6]
-a=list("hello")#通过list创建
+# a=[]#创建空列表
+# a=[2,3,4,5,6]
+# a=list("hello")#通过list创建
+#
+# matrix=[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20]]
+# print(len(matrix))
+# print(matrix[0])
+# print(matrix[0][0])
+#
+# # 列表元素的赋值,列表可修改，字符串不可修改
+# s=[1,3,5,7,9]
+# s[0]=2
+# print(s[0])
+#
+# # 列表删除元素
+# del(s[0])
+# print(s)
+# #切片赋值
+# name=list("Perl")
+# print(name)
+# name[2:3]=list("arel")#替换第二位
+# print(name)
+# name=list("Perl")
+# print(name)
+# name[2:2]=list("arel")#插入输入，并放入第2位
+# print(name)
+#
+#
+# #列表的函数或方法
+# # append()在列表末尾追加
+# name.append(12)
+# print("append():{}".format(name))
+# #extend()拓展列表,加好和extend的区别：加好是连接两个列表，产生一个新列表，原来的列表没变化，extend扩充列表，原列表被扩充
+# name.extend([13,15])
+# namename=name+[12]
+# print("extend；{0}{1}".format(name,namename))
+# #copy()赋值列表
+# name1=name.copy()
+# print("copy():{}".format(name1))
+# #insert()插入
+# name.insert(12,111)
+# print("insert():{}".format(name))
+# name.remove(111)
+# print("remove:{}".format(name))
+# print(name.pop())
+# print(name.pop(0))
+# print(name)
+#
+# name.reverse()
+# print("reverse:{}".format(name))
+# #clear()清除列表所有数据,删除某个元素用remove()
+# name.clear()
+# print("clear:{}".format(name))
+#
+#
+# # 字符串与列表的相互操作
+# date="3/11/20180"
+# a=date.split("/")
+# print("split():{}".format(a))
+# # join,将列表转化为字符串
+# a=["hello","good","boy","wii"]
+# print(" ".join(a))
+# print(";".join(a))
+#
+#
+# #求有几个单词
+# sentence="this is a pen"
+# list=sentence.split()
+# print("{}个单词".format(len(list)))
+#
+# # 创建列表
+# # list=[]
+# # for i in range(4):
+# #     list.append(input())
+# # print(list)
+# # list=[input() for i in range(4)]
+# # print(list)
+#
+# #元组，只有一个元素的时候要加逗号,不然会被识别成普通的数
+# print((100,))
+# print((100,200))
+#
+#
+# # 创建元组
+# #序列可修改，列表可修改，元组不可修改，字符串不可修改，
+# # 其他类型转换为元组用tuple(),其他类型转换为列表用list()
+# print(tuple("abcdeewewe"))
+# b=tuple("abcdeewewe")
+# print(b.count("e"))#元素出现的次数
+# print(b.index("a"))#元素出现的下标
+#
+# #random
+# import random
+# random.seed(30)
+# print(random.random())
+#
+# print(random.uniform(1,10))#生成[1,10]内的浮点数
+# print(random.randint(1,10))#生成[1,10]内的随机整数
+# print(random.randrange(10,20,2))
+# print(random.choice([1,2,3,4,5]))#从序列中随机选取一个元素
+# a=[1,2,3,4,5]
+# print(random.shuffle(a))#打乱序列顺序
+# print(a)
+# print(random.sample(a,3))#从序列中随机取三个元素
+#
+#
+# # 掷10000次硬币，正面向上的概率是多少
+# list=[random.randint(0,1) for i in range(10000)]
+# print(sum(list)/len(list))
+#
+# # 产生8位密码，密码由数字和字母组成
+# digits=[str(i) for i in range(10)]#数字序列
+# print(digits)
+# letter=[chr(i) for i in range(65,91)]+[chr(i) for i in range(97,123)]#字母序列
+# print(letter)
+# num_of_digits=random.randint(1,7)#数字个数
+# num_of_letter=8-num_of_digits#字母个数
+# password=[random.choice(digits) for i in range(num_of_digits)]+\
+#     [random.choice(letter) for i in range(num_of_letter)]
+#
+# random.shuffle(password)
+# result=" ".join(password)
+# print(result)
 
+n = int(input())
+sum = 0
+ALLpass = False
+nonum = 0
+m = -1
+z = -1
+list = []
+list1 = []
+digits = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2]
 
-matrix=[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20]]
-print(len(matrix))
-print(matrix[0])
-print(matrix[0][0])
+for i in range(n):
+    a = input()
+    list.append(a)
+    for j, k in zip(a, digits):
+        if j.isdigit():
+            sum += int(j) * int(k)
+        else:
+            nonum += 1
+            break
 
-# 列表元素的赋值,列表可修改，字符串不可修改
-s=[1,3,5,7,9]
-s[0]=2
-print(s[0])
+    z = sum % 11
 
-# 列表删除元素
-del(s[0])
-print(s)
-#切片赋值
-name=list("Perl")
-print(name)
-name[2:3]=list("arel")#替换第二位
-print(name)
-name=list("Perl")
-print(name)
-name[2:2]=list("arel")#插入输入，并放入第2位
-print(name)
+    sum = 0
+    if z == 0:
+        m = 1
+    elif z == 1:
+        m = 0
+    elif z == 2:
+        m = int('X')
+    elif z == 3:
+        m = 9
+    elif z == 4:
+        m = 8
+    elif z == 5:
+        m = 7
+    elif z == 6:
+        m = 6
+    elif z == 7:
+        m = 5
+    elif z == 8:
+        m = 4
+    elif z == 9:
+        m = 3
+    elif z == 10:
+        m = 2
 
+    if nonum == 0 and a[-1] == str(m):
+        m = -1
+        ALLpass = True
+    else:
+        ALLpass = False
+        nonum = 0
+        m = -1
+        list1.append(a)
 
-#列表的函数或方法
-# append()在列表末尾追加
-name.append(12)
-print("append():{}".format(name))
-#extend()拓展列表,加好和extend的区别：加好是连接两个列表，产生一个新列表，原来的列表没变化，extend扩充列表，原列表被扩充
-name.extend([13,15])
-namename=name+[12]
-print("extend；{0}{1}".format(name,namename))
-#copy()赋值列表
-name1=name.copy()
-print("copy():{}".format(name1))
-#insert()插入
-name.insert(12,111)
-print(name)
-#clear()清除列表所有数据,删除某个元素用remove()
-name.clear()
-print("clear:{}".format(name))
-
-
-
+if ALLpass == True:
+    print("All passed")
+else:
+    for a in list1:
+        print(a)
